@@ -84,9 +84,11 @@ public class Matrix {
 
 	public void realGame() {
 		Boolean running = true;
+		int runrum = 0;
 		
 		while (running == true) {
-		
+			runrum++;
+			
 		msg = "(first player) what is your move? (row)";
 		int arow = Integer.parseInt(JOptionPane.showInputDialog(null, msg));
 		msg = "col?";
@@ -133,6 +135,23 @@ public class Matrix {
 		System.out.println();
 
 	}
+	if (realGame[0][0]== 'X' realGame[0][1] && realGame[0][1]== realGame[0][2]) {
+		System.out.println("You Won!");
+			} else if (game[1][0]== game[1][1] && game[1][1]== game[1][2]) {
+				System.out.println("You Won!");
+			} else if (game[2][0]== game[2][1] && game[2][1]== game[2][2]) {
+				System.out.println("You Won!");
+			} else if (game[0][0]== game[1][0] && game[1][0]== game[2][0]) {
+				System.out.println("You Won!");
+			} else if (game[0][1]== game[1][1] && game[1][1]== game[2][1]) {
+				System.out.println("You Won!");
+			} else if (game[0][2]== game[1][2] && game[0][2]== game[2][2]) {
+				System.out.println("You Won!");		
+			} else if (runrum == 9) {
+				System.out.println("It's a tie!");	
+			}else 
+				System.out.println("Good Job you broke everything.");	
+	
 }
 	
 		
@@ -148,3 +167,24 @@ public class Matrix {
 	
 	
 }//end of all
+
+
+
+
+
+
+
+/***
+ *   00  01  02
+ *   10  11  12
+ *   20  21  22
+ * 
+ * 
+ * 
+ */
+
+
+
+
+
+

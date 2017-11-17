@@ -156,12 +156,70 @@ public class Matrix {
 			} else if (runrum < 9) {
 				running = true;
 			} else if (running == false) {
-				System.exit(0);
+				msg = "Do you want to do another game?";
+				String goAgain = JOptionPane.showInputDialog(null, msg).toLowerCase();
+
+				if (goAgain.equals("y") || (goAgain.equals("yes"))) {
+					running = true;
+					runrum = 0;
+
+					realGame[0][0] = '-';
+					realGame[0][1] = '-';
+					realGame[0][2] = '-';
+
+					realGame[1][0] = '-';
+					realGame[1][1] = '-';
+					realGame[1][2] = '-';
+
+					realGame[2][0] = '-';
+					realGame[2][1] = '-';
+					realGame[2][2] = '-';
+
+				} else if (goAgain.equals("n") || (goAgain.equals("no"))) {
+					running = false;
+					msg = "Goodbye, see ya!";
+					System.exit(0);
+					JOptionPane.showMessageDialog(null, msg);
+				} else {
+					msg = "Please try again";
+					JOptionPane.showMessageDialog(null, msg);
+
+				}
 			} else
 				System.out.println("Good Job you broke everything.");
 
-			if (running == false)
+			 if (running == false) {
+			msg = "Do you want to do another game?";
+			String goAgain = JOptionPane.showInputDialog(null, msg).toLowerCase();
+
+			if (goAgain.equals("y") || (goAgain.equals("yes"))) {
+				running = true;
+				runrum = 0;
+
+				realGame[0][0] = '-';
+				realGame[0][1] = '-';
+				realGame[0][2] = '-';
+
+				realGame[1][0] = '-';
+				realGame[1][1] = '-';
+				realGame[1][2] = '-';
+
+				realGame[2][0] = '-';
+				realGame[2][1] = '-';
+				realGame[2][2] = '-';
+
+			} else if (goAgain.equals("n") || (goAgain.equals("no"))) {
+				running = false;
+				msg = "Goodbye, see ya!";
 				System.exit(0);
+				JOptionPane.showMessageDialog(null, msg);
+			} else {
+				msg = "Please try again";
+				JOptionPane.showMessageDialog(null, msg);
+
+			}
+			 }
+
 			msg = "(Second Player) what is your move? (row)";
 			arow = Integer.parseInt(JOptionPane.showInputDialog(null, msg));
 			msg = "col?";
@@ -217,11 +275,40 @@ public class Matrix {
 			} else if (runrum < 9) {
 				running = true;
 			} else if (running == false) {
-				System.exit(0);
+				msg = "Do you want to do another game?";
+				String goAgain = JOptionPane.showInputDialog(null, msg).toLowerCase();
+
+				if (goAgain.equals("y") || (goAgain.equals("yes"))) {
+					running = true;
+					runrum = 0;
+
+					realGame[0][0] = '-';
+					realGame[0][1] = '-';
+					realGame[0][2] = '-';
+
+					realGame[1][0] = '-';
+					realGame[1][1] = '-';
+					realGame[1][2] = '-';
+
+					realGame[2][0] = '-';
+					realGame[2][1] = '-';
+					realGame[2][2] = '-';
+
+				} else if (goAgain.equals("n") || (goAgain.equals("no"))) {
+					running = false;
+					msg = "Goodbye, see ya!";
+					System.exit(0);
+					JOptionPane.showMessageDialog(null, msg);
+				} else {
+					msg = "Please try again";
+					JOptionPane.showMessageDialog(null, msg);
+
+				}
 			} else
 				System.out.println("Good Job you broke everything.");
 
 		}
+		
 
 	}
 
